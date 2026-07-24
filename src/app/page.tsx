@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+"use client";
 import MotionWrapper from "../components/common/MotionWrapper";
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
@@ -8,13 +8,7 @@ import Hero from "../components/sections/Hero";
 import Projects from "../components/sections/Projects";
 import Skills from "../components/sections/Skills";
 
-export const metadata: Metadata = {
-  title: "Kuldeep Kumar | Full Stack Software Engineer",
-  description: "Explore the portfolio of Kuldeep Kumar, a Full Stack Software Engineer building scalable SaaS products, modern web applications, and AI-powered platforms.",
-  alternates: {
-    canonical: "/",
-  },
-};
+
 
 export default function Home() {
   return (
