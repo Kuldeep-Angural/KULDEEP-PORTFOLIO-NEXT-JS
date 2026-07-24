@@ -1,0 +1,12 @@
+.next
+out
+build
+node_modules
+public
+.next/**
+coverage
+dist
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
