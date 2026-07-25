@@ -1,12 +1,14 @@
 "use client";
 
-import emailjs from "@emailjs/browser";
 import { AtSign, FileText, Mail, MapPin, MessageSquare, Phone, Send, User } from "lucide-react";
 import { useState } from "react";
 import MotionWrapper from "../common/MotionWrapper";
+import Toast from "../common/Toast";
+import { sendEmail } from "@/src/lib/email";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
+  const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
 
   const [form, setForm] = useState({
     name: "",
@@ -19,27 +21,21 @@ export default function Contact() {
     e.preventDefault();
 
     if (!form.name || !form.email || !form.message) {
-      alert("Please fill all required fields.");
+      setToast({ message: "Please fill all required fields.", type: "error" });
       return;
     }
 
     try {
       setLoading(true);
 
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!,
-        {
-          from_name: form.name,
-          from_email: form.email,
-          subject: form.subject,
-          message: form.message,
-          to_name: "Kuldeep Kumar",
-        },
-        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY!
-      );
+      await sendEmail({
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message,
+      });
 
-      alert("Email sent successfully!");
+      setToast({ message: "Email sent successfully! I will get back to you soon.", type: "success" });
 
       setForm({
         name: "",
@@ -49,7 +45,7 @@ export default function Contact() {
       });
     } catch (error) {
       console.error(error);
-      alert("Failed to send email.");
+      setToast({ message: "Failed to send email. Please try again.", type: "error" });
     } finally {
       setLoading(false);
     }
@@ -194,6 +190,8 @@ export default function Contact() {
           </form>
         </div>
       </div>
+
+      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </section>
   );
 }

@@ -12,10 +12,11 @@ export async function sendEmail(payload: ContactPayload) {
     process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
     process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
     {
-      from_name: payload.name,
-      from_email: payload.email,
+      name: payload.name,
+      email: payload.email,
       subject: payload.subject,
       message: payload.message,
+      time: new Date().toLocaleString(),
       reply_to: payload.email,
     },
     process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
