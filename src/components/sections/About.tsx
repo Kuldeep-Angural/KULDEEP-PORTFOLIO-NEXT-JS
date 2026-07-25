@@ -2,23 +2,27 @@
 
 import { BriefcaseBusiness, Code2, Globe, Layers3, MapPin } from "lucide-react";
 import MotionWrapper from "../common/MotionWrapper";
+import AnimatedCounter from "../common/AnimationCounter";
 
 const highlights = ["Scalable SaaS Applications", "Multi-Tenant Architecture", "CRM & ERP Platforms", "REST APIs & Microservices", "Cloud Deployment (AWS)", "Modern UI Development"];
 
 const stats = [
   {
     title: "Experience",
-    value: "3+ Years",
+    value: 3,
+    suffix: "+ Years",
     icon: BriefcaseBusiness,
   },
   {
     title: "Projects",
-    value: "20+",
+    value: 20,
+    suffix: "+",
     icon: Layers3,
   },
   {
     title: "Technologies",
-    value: "20+",
+    value: 20,
+    suffix: "+",
     icon: Code2,
   },
   {
@@ -76,8 +80,16 @@ export default function About() {
                       <Icon size={28} />
                     </div>
 
-                    <h3 className="text-3xl font-bold text-white">{item.value}</h3>
-
+                    <h3 className="text-3xl font-bold text-white">
+                      {typeof item.value === "number" ? (
+                        <AnimatedCounter
+                          end={item.value}
+                          suffix={item.suffix}
+                        />
+                      ) : (
+                        item.value
+                      )}
+                    </h3>
                     <p className="text-foreground-muted mt-2">{item.title}</p>
                   </div>
                 );
@@ -93,7 +105,7 @@ export default function About() {
                     <h3 className="text-xl font-semibold text-white">Currently Working</h3>
 
                     <p className="text-foreground-secondary mt-2">
-                      Software Engineer @ INSONIX
+                      Senior Software Engineer @ INSONIX
                       <br />
                       Building Multi-Tenant SaaS, Payload CMS and Modern Web Platforms.
                     </p>

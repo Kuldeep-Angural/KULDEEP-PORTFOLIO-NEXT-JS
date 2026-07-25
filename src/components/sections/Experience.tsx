@@ -5,7 +5,7 @@ import MotionWrapper from "../common/MotionWrapper";
 
 const experiences = [
  {
-  company: "Confidentials",
+  company: "confidential",
   position: "Full Stack Software Engineer",
   duration: "August 2026 — Present",
   location: "Remote",
