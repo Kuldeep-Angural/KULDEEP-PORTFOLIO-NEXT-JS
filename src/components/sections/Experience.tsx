@@ -4,26 +4,76 @@ import { BriefcaseBusiness, CalendarDays, ChevronRight } from "lucide-react";
 import MotionWrapper from "../common/MotionWrapper";
 
 const experiences = [
-  {
-    company: "INSONIX",
-    position: "Software Engineer",
-    duration: "Jan 2024 — Present",
-    location: "Remote",
+ {
+  company: "Confidentials",
+  position: "Full Stack Software Engineer",
+  duration: "August 2026 — Present",
+  location: "Remote",
 
-    description: "Working as a Full Stack Software Engineer, building enterprise SaaS applications, multi-tenant platforms, CMS solutions, analytics dashboards, and automation tools for international clients.",
+  description:
+    "Working as a Full Stack Software Engineer, developing scalable web applications, enterprise SaaS platforms, modern CMS solutions, and cloud-native applications while delivering high-performance, maintainable, and user-centric software.",
 
-    technologies: ["Next.js", "React", "Node.js", "Express", "Payload CMS", "Storyblok", "MongoDB", "PostgreSQL", "AWS", "Docker", "GitHub Actions"],
+  technologies: [
+    "Next.js",
+    "React",
+    "Node.js",
+    "Express",
+    "TypeScript",
+    "MongoDB",
+    "PostgreSQL",
+    "AWS",
+    "Docker",
+    "GitHub Actions",
+    "REST APIs",
+    "Material UI"
+  ],
 
-    responsibilities: [
-      "Developed scalable multi-tenant SaaS applications.",
-      "Built reusable React & Next.js component libraries.",
-      "Designed secure REST APIs with Node.js & Express.",
-      "Integrated Stripe, Webhooks and third-party APIs.",
-      "Worked with AWS S3, RDS and Docker deployments.",
-      "Implemented CI/CD pipelines using GitHub Actions.",
-      "Collaborated with designers and product managers in Agile teams.",
-    ],
-  },
+  responsibilities: [
+    "Develop scalable full-stack web applications using Next.js and Node.js.",
+    "Design and implement secure RESTful APIs and backend services.",
+    "Build reusable, responsive, and accessible React components.",
+    "Optimize application performance and improve user experience.",
+    "Integrate third-party APIs, authentication, and payment services.",
+    "Work with MongoDB and PostgreSQL for efficient data management.",
+    "Deploy and maintain applications using AWS and Docker.",
+    "Implement CI/CD pipelines with GitHub Actions.",
+    "Collaborate with cross-functional teams in an Agile development environment.",
+    "Participate in code reviews and mentor junior developers."
+  ],
+},
+{
+  company: "INSONIX",
+  position: "Software Engineer",
+  duration: "June 2023 — August 2026",
+  location: "Onsite, Chandigarh, India",
+
+  description:
+    "Worked as a Software Engineer, building enterprise SaaS applications, multi-tenant platforms, CMS solutions, analytics dashboards, and automation tools for international clients.",
+
+  technologies: [
+    "Next.js",
+    "React",
+    "Node.js",
+    "Express",
+    "Payload CMS",
+    "Storyblok",
+    "MongoDB",
+    "PostgreSQL",
+    "AWS",
+    "Docker",
+    "GitHub Actions"
+  ],
+
+  responsibilities: [
+    "Developed scalable multi-tenant SaaS applications.",
+    "Built reusable React & Next.js component libraries.",
+    "Designed secure REST APIs with Node.js & Express.",
+    "Integrated Stripe, Webhooks, and third-party APIs.",
+    "Worked with AWS S3, RDS, and Docker deployments.",
+    "Implemented CI/CD pipelines using GitHub Actions.",
+    "Collaborated with designers and product managers in Agile teams."
+  ],
+}
 
   // {
   //   company: "Infospectra",
