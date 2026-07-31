@@ -26,22 +26,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "tenivio",
+    id: "multi-tenant-website-builder",
 
     featured: true,
 
     category: "SaaS",
 
-    title: "Tenivio",
+    title: "Confidential",
 
     subtitle: "Multi-Tenant Website Builder & Headless CMS",
 
     description:
-      "Tenivio is a modern multi-tenant SaaS platform that enables businesses and agencies to create, manage, and deploy multiple websites from a single application. It provides authentication, subscription plans, reusable templates, media management, tenant isolation, and a flexible content management experience powered by Payload CMS.",
+      "Modern multi-tenant SaaS platform that enables businesses and agencies to create, manage, and deploy multiple websites from a single application. It provides authentication, subscription plans, reusable templates, media management, tenant isolation, and a flexible content management experience powered by Payload CMS.",
 
-    image: "/tenivio.png",
+    image: "/confidential.png",
 
-    liveUrl: "https://tenivio.com",
+    liveUrl: "",
 
     githubUrl: "",
 
@@ -98,7 +98,7 @@ export const projects: Project[] = [
 
     image: "/fa.png",
 
-    liveUrl: "",
+    liveUrl: "https://fa.compilefussion.com",
 
     githubUrl: "",
 
@@ -112,19 +112,19 @@ export const projects: Project[] = [
   },
 
   {
-    id: "target-profilo",
+    id: "marketing-tool-and-crm",
 
     featured: true,
 
     category: "SaaS",
 
-    title: "Target Profilo",
+    title: "Confidential",
 
     subtitle: "Marketing Automation Platform",
 
     description: "Enterprise marketing automation platform that enables businesses to manage Email, SMS, WhatsApp campaigns, landing pages, customer journeys, workflow automation, and online events from one platform.",
 
-    image: "/tp.png",
+    image: "/confidential.png",
 
     liveUrl: "",
 
@@ -140,13 +140,13 @@ export const projects: Project[] = [
   },
 
   {
-    id: "kashflow",
+    id: "finance-app",
 
     featured: false,
 
     category: "Desktop",
 
-    title: "KashFlow",
+    title: "Finance Management Application",
 
     subtitle: "Desktop Accounting Management System",
 
@@ -208,7 +208,7 @@ export const projects: Project[] = [
 
     description: "Enterprise CRM and ERP platform used for sales management, accounting, inventory tracking, employee management, customer operations, and business reporting.",
 
-    image: "/mro.png",
+    image: "/confidential.png",
 
     liveUrl: "",
 
@@ -223,22 +223,22 @@ export const projects: Project[] = [
     highlights: ["Developed enterprise dashboard.", "Created reusable UI components.", "Integrated REST APIs.", "Optimized frontend performance."],
   },
   {
-    id: "safeaeon",
+    id: "soc-platform",
 
     featured: false,
 
     category: "Enterprise",
 
-    title: "SafeAeon",
+    title: "Soc Platform",
 
     subtitle: "Security Management Dashboard",
 
     description:
-      "SafeAeon is an enterprise security management platform that helps organizations monitor security operations, manage personnel, track incidents, generate reports, and oversee day-to-day security activities through a centralized dashboard.",
+      "Enterprise security management platform that helps organizations monitor security operations, manage personnel, track incidents, generate reports, and oversee day-to-day security activities through a centralized dashboard.",
 
-    image: "/safeaeon.png",
+    image: "/confidential.png",
 
-    liveUrl: "https://safeaeon.ai",
+    liveUrl: "",
 
     githubUrl: "",
 
@@ -251,20 +251,20 @@ export const projects: Project[] = [
     highlights: ["Built enterprise dashboard modules.", "Created reusable React components.", "Integrated secure backend APIs.", "Optimized reporting interface."],
   },
   {
-    id: "EasySpeak",
+    id: "english-learning-platform",
 
     featured: false,
 
     category: "AI",
 
-    title: "EasySpeak",
+    title: "English Learning Platform",
 
     subtitle: "AI Powered English Learning Platform",
 
     description:
-      "EasySpeak is an interactive English speaking and language learning platform designed to improve communication skills through AI-assisted conversations, vocabulary exercises, pronunciation practice, quizzes, and personalized learning experiences.",
+      "An interactive English speaking and language learning platform designed to improve communication skills through AI-assisted conversations, vocabulary exercises, pronunciation practice, quizzes, and personalized learning experiences.",
 
-    image: "/easyspeak.png",
+    image: "/confidential.png",
 
     liveUrl: "",
 
