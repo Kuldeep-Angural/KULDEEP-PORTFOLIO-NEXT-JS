@@ -20,9 +20,9 @@ export default function Projects() {
       {/* Background */}
 
       <div className="absolute inset-0 -z-10">
-        <div className="hidden md:block bg-primary/10 absolute top-40 left-0 h-72 w-72 rounded-full blur-[120px]" />
+        <div className="bg-primary/10 absolute top-40 left-0 hidden h-72 w-72 rounded-full blur-[120px] md:block" />
 
-        <div className="hidden md:block absolute right-0 bottom-40 h-80 w-80 rounded-full bg-violet-500/10 blur-[120px]" />
+        <div className="absolute right-0 bottom-40 hidden h-80 w-80 rounded-full bg-violet-500/10 blur-[120px] md:block" />
       </div>
 
       <div className="container-custom">

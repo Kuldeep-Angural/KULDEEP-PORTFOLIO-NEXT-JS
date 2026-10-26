@@ -95,7 +95,7 @@ export default function MotionWrapper({ children, className, animation = "up", d
       initial="hidden"
       whileInView="visible"
       viewport={{
-        amount: 0.10,
+        amount: 0.1,
       }}
       transition={{
         duration,

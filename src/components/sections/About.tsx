@@ -41,18 +41,19 @@ export default function About() {
 
           <MotionWrapper>
             <div>
-              <span className="border-primary/30 bg-primary/10 text-primary inline-flex rounded-full border px-4 py-2 text-sm font-medium">About Me</span>
+              <span className="border-primary/30 bg-primary/10 text-primary inline-flex rounded-full border px-4 py-2 text-sm font-medium">How I work</span>
 
               <h2 className="mt-6 text-4xl font-bold text-white lg:text-5xl">
-                Building digital products
+                Engineering digital products
                 <br />
-                <span className="text-gradient">that solve real problems.</span>
+                <span className="text-gradient">that earn their place.</span>
               </h2>
 
               <p className="text-foreground-secondary mt-8 text-lg leading-8">
-                I'm a Full Stack Software Engineer with professional experience developing scalable SaaS platforms, enterprise applications, multi-tenant CMS solutions, and cloud-native systems.
+                I&apos;m a full-stack software engineer with experience building SaaS platforms, enterprise applications, and content-driven products.
                 <br />
-                <br />I enjoy transforming complex ideas into elegant, high-performance applications using modern technologies like React, Next.js, Node.js, .NET, PostgreSQL, MongoDB, Docker, and AWS.
+                <br />I bring a product-minded approach to the full development lifecycle: understanding the problem, shaping a maintainable solution, and sweating the details that make software dependable and easy to use. My day-to-day toolkit spans
+                .NET, React, Next.js, Node.js, and cloud technologies.
               </p>
 
               <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -80,16 +81,7 @@ export default function About() {
                       <Icon size={28} />
                     </div>
 
-                    <h3 className="text-3xl font-bold text-white">
-                      {typeof item.value === "number" ? (
-                        <AnimatedCounter
-                          end={item.value}
-                          suffix={item.suffix}
-                        />
-                      ) : (
-                        item.value
-                      )}
-                    </h3>
+                    <h3 className="text-3xl font-bold text-white">{typeof item.value === "number" ? <AnimatedCounter end={item.value} suffix={item.suffix} /> : item.value}</h3>
                     <p className="text-foreground-muted mt-2">{item.title}</p>
                   </div>
                 );
@@ -102,12 +94,12 @@ export default function About() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-white">Currently Working</h3>
+                    <h3 className="text-xl font-semibold text-white">Current focus</h3>
 
                     <p className="text-foreground-secondary mt-2">
-                      Senior Software Engineer @ INSONIX
+                      Full-stack product engineering
                       <br />
-                      Building Multi-Tenant SaaS, Payload CMS and Modern Web Platforms.
+                      Building thoughtful SaaS and modern web applications.
                     </p>
                   </div>
                 </div>

@@ -9,11 +9,7 @@ interface AnimatedCounterProps {
   suffix?: string;
 }
 
-export default function AnimatedCounter({
-  end,
-  duration = 8000,
-  suffix = "",
-}: AnimatedCounterProps) {
+export default function AnimatedCounter({ end, duration = 8000, suffix = "" }: AnimatedCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
 

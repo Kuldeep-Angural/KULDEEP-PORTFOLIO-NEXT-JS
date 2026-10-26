@@ -3,105 +3,41 @@
 import { BriefcaseBusiness, CalendarDays, ChevronRight } from "lucide-react";
 import MotionWrapper from "../common/MotionWrapper";
 
-const experiences = [
- {
-  company: "confidential",
-  position: "Full Stack Software Engineer",
-  duration: "August 2026 — Present",
-  location: "Remote",
+type ExperienceEntry = {
+  company: string;
+  position: string;
+  duration: string;
+  location?: string;
+  description: string;
+  technologies: string[];
+  responsibilities: string[];
+};
 
-  description:
-    "Working as a Full Stack Software Engineer, developing scalable web applications, enterprise SaaS platforms, modern CMS solutions, and cloud-native applications while delivering high-performance, maintainable, and user-centric software.",
-
-  technologies: [
-    "Next.js",
-    "React",
-    "Node.js",
-    "Express",
-    "TypeScript",
-    "MongoDB",
-    "PostgreSQL",
-    "AWS",
-    "Docker",
-    "GitHub Actions",
-    "REST APIs",
-    "Material UI"
-  ],
-
-  responsibilities: [
-    "Develop scalable full-stack web applications using Next.js and Node.js.",
-    "Design and implement secure RESTful APIs and backend services.",
-    "Build reusable, responsive, and accessible React components.",
-    "Optimize application performance and improve user experience.",
-    "Integrate third-party APIs, authentication, and payment services.",
-    "Work with MongoDB and PostgreSQL for efficient data management.",
-    "Deploy and maintain applications using AWS and Docker.",
-    "Implement CI/CD pipelines with GitHub Actions.",
-    "Collaborate with cross-functional teams in an Agile development environment.",
-    "Participate in code reviews and mentor junior developers."
-  ],
-},
-{
-  company: "INSONIX",
-  position: "Software Engineer",
-  duration: "June 2023 — August 2026",
-  location: "Onsite, Chandigarh, India",
-
-  description:
-    "Worked as a Software Engineer, building enterprise SaaS applications, multi-tenant platforms, CMS solutions, analytics dashboards, and automation tools for international clients.",
-
-  technologies: [
-    "Next.js",
-    "React",
-    "Node.js",
-    "Express",
-    "Payload CMS",
-    "Storyblok",
-    "MongoDB",
-    "PostgreSQL",
-    "AWS",
-    "Docker",
-    "GitHub Actions"
-  ],
-
-  responsibilities: [
-    "Developed scalable multi-tenant SaaS applications.",
-    "Built reusable React & Next.js component libraries.",
-    "Designed secure REST APIs with Node.js & Express.",
-    "Integrated Stripe, Webhooks, and third-party APIs.",
-    "Worked with AWS S3, RDS, and Docker deployments.",
-    "Implemented CI/CD pipelines using GitHub Actions.",
-    "Collaborated with designers and product managers in Agile teams."
-  ],
-}
-
-  // {
-  //   company: "Infospectra",
-  //   position: "Frontend Developer",
-  //   duration: "Jul 2023 — Jan 2024",
-  //   location: "Mohali",
-
-  //   description:
-  //     "Worked on a large-scale CRM & ERP platform used for sales, employee management, finance and inventory operations.",
-
-  //   technologies: [
-  //     "React",
-  //     "Redux",
-  //     "JavaScript",
-  //     "Syncfusion",
-  //     "Material UI",
-  //     "REST API",
-  //   ],
-
-  //   responsibilities: [
-  //     "Developed responsive business dashboards.",
-  //     "Integrated REST APIs.",
-  //     "Built reusable UI components.",
-  //     "Optimized application performance.",
-  //     "Worked closely with backend developers.",
-  //     "Maintained enterprise-grade frontend architecture.",
-  //   ],
-  // },
+const experiences: ExperienceEntry[] = [
+  {
+    company: "Xbyte Solutions",
+    position: "Software Engineer",
+    duration: "July 2026 — Present",
+    description: "Working across .NET services and React/Next.js applications to deliver full-stack web product features.",
+    technologies: [".NET", "React.js", "Next.js"],
+    responsibilities: ["Develop application features using .NET.", "Build responsive user interfaces with React.js.", "Create web experiences and application pages with Next.js.", "Contribute across frontend and backend codebases."],
+  },
+  {
+    company: "INSONIX",
+    position: "Software Engineer",
+    duration: "June 2023 — August 2026",
+    location: "Onsite, Chandigarh, India",
+    description: "Built enterprise SaaS applications, multi-tenant platforms, CMS solutions, analytics dashboards, and automation tools for international clients.",
+    technologies: ["Next.js", "React", "Node.js", "Express", "Payload CMS", "Storyblok", "MongoDB", "PostgreSQL", "AWS", "Docker"],
+    responsibilities: [
+      "Developed scalable multi-tenant SaaS applications.",
+      "Built reusable React and Next.js component libraries.",
+      "Designed REST APIs with Node.js and Express.",
+      "Integrated payment providers, webhooks, and third-party APIs.",
+      "Worked with AWS services and Docker-based deployments.",
+      "Collaborated with designers and product managers in Agile teams.",
+    ],
+  },
 ];
 
 export default function Experience() {
@@ -112,11 +48,11 @@ export default function Experience() {
 
         <MotionWrapper>
           <div className="mx-auto mb-20 max-w-3xl text-center">
-            <span className="border-primary/20 bg-primary/10 text-primary inline-flex rounded-full border px-4 py-2 text-sm">Experience</span>
+            <span className="border-primary/20 bg-primary/10 text-primary inline-flex rounded-full border px-4 py-2 text-sm">Career</span>
 
-            <h2 className="mt-6 text-4xl font-bold text-white lg:text-5xl">Professional Experience</h2>
+            <h2 className="mt-6 text-4xl font-bold tracking-tight text-white lg:text-5xl">Experience built in production</h2>
 
-            <p className="text-foreground-secondary mt-6 text-lg leading-8">Building scalable SaaS platforms, enterprise software, cloud-native applications and modern web experiences.</p>
+            <p className="text-foreground-secondary mt-6 text-lg leading-8">A record of shipping practical software across product teams, SaaS platforms, and modern web applications.</p>
           </div>
         </MotionWrapper>
 
@@ -140,11 +76,11 @@ export default function Experience() {
                   <div className="card p-8">
                     <div className="flex flex-col justify-between gap-6 lg:flex-row">
                       <div>
-                        <h3 className="text-3xl font-bold text-white">{job.company}</h3>
+                        <h3 className="text-2xl font-bold tracking-tight text-white">{job.company}</h3>
 
-                        <p className="text-primary mt-2 text-xl font-semibold">{job.position}</p>
+                        <p className="text-primary mt-2 text-lg font-semibold">{job.position}</p>
 
-                        <p className="text-foreground-muted mt-2">{job.location}</p>
+                        {job.location && <p className="text-foreground-muted mt-2">{job.location}</p>}
                       </div>
 
                       <div className="text-foreground-secondary inline-flex h-fit items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm">
